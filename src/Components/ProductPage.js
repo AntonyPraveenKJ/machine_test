@@ -13,6 +13,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "./logo.css";
+import { minWidth } from "@mui/system";
 
 const theme = createTheme();
 
@@ -93,7 +94,7 @@ function ProductPage() {
         </Typography>
       </Grid>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={{ minWidth: "100%" }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>PRODUCT NAME</TableCell>
