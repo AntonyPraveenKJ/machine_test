@@ -34,13 +34,13 @@ function SelectProduct() {
   const [box, setBox] = useState(false);
 
   const rows = async () => {
-    await axios.get("http://localhost:5000/getProducts").then((response) => {
+    await axios.get("https://dnsstore.online/getProducts").then((response) => {
       setProducts(response.data.message);
     });
   };
 
   const getCategory = async () => {
-    await axios.get("http://localhost:5000/getCategory").then((response) => {
+    await axios.get("https://dnsstore.online/getCategory").then((response) => {
       setCategories(response.data.message);
       console.log(response.data.message);
     });
@@ -51,7 +51,7 @@ function SelectProduct() {
     console.log(categories[id].subCategories);
     setCateName(category);
     await axios
-      .post("http://localhost:5000/getCatProducts", { category: category })
+      .post("https://dnsstore.online/getCatProducts", { category: category })
       .then((response) => {
         setCatProducts(response.data.message);
         console.log(response.data.message);

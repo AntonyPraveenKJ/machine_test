@@ -21,7 +21,7 @@ function ProductPage() {
   const [products, setProducts] = useState([]);
 
   const rows = async () => {
-    await axios.get("http://localhost:5000/getProducts").then((response) => {
+    await axios.get("https://dnsstore.online/getProducts").then((response) => {
       setProducts(response.data.message);
     });
   };

@@ -26,7 +26,7 @@ function AddProduct() {
   const [subcategory, setSubCategory] = useState("");
 
   const getCategory = async () => {
-    await axios.get("http://localhost:5000/getCategory").then((response) => {
+    await axios.get("https://dnsstore.online/getCategory").then((response) => {
       setCategories(response.data.message);
       console.log(categories, "categories");
     });
@@ -36,7 +36,7 @@ function AddProduct() {
     setCategory(input);
     console.log(input);
     await axios
-      .post("http://localhost:5000/getSub", { category: input })
+      .post("https://dnsstore.online/getSub", { category: input })
       .then((response) => {
         setSub(response.data.message[0].subCategories);
         console.log(sub, "subcat");
@@ -49,7 +49,7 @@ function AddProduct() {
 
   const sendRequest = async () => {
     await axios
-      .post("http://localhost:5000/addNewProduct", {
+      .post("https://dnsstore.online/addNewProduct", {
         proName: proName,
         category: category,
         subcategory: subcategory,
