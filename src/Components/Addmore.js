@@ -33,7 +33,7 @@ function Addmore() {
 
   const sendRequest = async () => {
     await axios
-      .put("http://localhost:5000/addmoresub", {
+      .put("https://dnsstore.online/addmoresub", {
         category: inputs.category,
         subcategory: inputs.subcategory,
       })
@@ -47,7 +47,7 @@ function Addmore() {
   };
 
   const getCategory = async () => {
-    await axios.get("http://localhost:5000/getCategory").then((response) => {
+    await axios.get("https://dnsstore.online/getCategory").then((response) => {
       setCategories(response.data.message);
     });
   };

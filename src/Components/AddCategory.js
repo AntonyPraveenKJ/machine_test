@@ -31,7 +31,7 @@ function AddCategory() {
 
   const sendRequest = async () => {
     const res = await axios
-      .post("http://localhost:5000/addNewCategory", {
+      .post("https://dnsstore.online/addNewCategory", {
         category: inputs.category,
         subcategory: inputs.subcategory,
       })
